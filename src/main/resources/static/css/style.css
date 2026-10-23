@@ -1,2193 +1,4344 @@
 /* =========================================================
-   CAFÉ AURA
-   STYLE.CSS COMPLETO E ATUALIZADO
-========================================================= */
+
+   CAFÉ AURA
+
+   STYLE.CSS COMPLETO E ATUALIZADO
+
+================================================== */
+
+
+
 
 
 /* =========================================================
-   VARIÁVEIS
-========================================================= */
+
+   VARIÁVEIS
+
+================================================== */
+
+
 
 :root {
+
     --background: #f8f2ec;
+
     --card: #fffaf5;
+
     --primary: #68432f;
+
     --primary-dark: #3d261c;
+
     --accent: #d79b58;
+
     --text: #2b1a13;
+
     --muted: #735b4d;
+
     --border: rgba(104, 67, 47, 0.15);
+
     --shadow: 0 15px 40px rgba(61, 37, 27, 0.12);
+
     --white: #ffffff;
+
     --success: #5f8055;
+
     --danger: #b42318;
+
 }
+
+
+
 
 
 /* =========================================================
-   RESET
-========================================================= */
 
-* {
+   RESET
+
+================================================== */
+
+
+
+\* {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
 }
+
+
 
 html {
+
     scroll-behavior: smooth;
+
 }
+
+
 
 body {
+
     min-height: 100vh;
+
     background: var(--background);
+
     color: var(--text);
+
     font-family: Arial, Helvetica, sans-serif;
+
     line-height: 1.6;
+
 }
+
+
 
 a {
+
     color: inherit;
+
     text-decoration: none;
+
 }
+
+
 
 img {
+
     display: block;
+
     max-width: 100%;
+
 }
+
+
 
 button,
+
 input,
+
 select,
+
 textarea {
+
     font: inherit;
+
 }
+
+
 
 button {
+
     cursor: pointer;
+
 }
+
+
 
 .container {
+
     width: min(1180px, calc(100% - 32px));
+
     margin: 0 auto;
+
 }
 
 
+
+
+
 /* =========================================================
-   HEADER
-========================================================= */
+
+   HEADER
+
+================================================== */
+
+
 
 .header {
+
     position: sticky;
+
     top: 0;
+
     z-index: 100;
+
     width: 100%;
+
     border-bottom: 1px solid var(--border);
+
     background: rgba(255, 250, 245, 0.97);
+
     backdrop-filter: blur(12px);
+
 }
+
+
 
 .header-container {
+
     min-height: 78px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     gap: 25px;
+
 }
 
+
+
 .navbar {
+
     min-height: 78px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     gap: 24px;
+
 }
+
+
+
 
 
 /* =========================================================
-   LOGO
-========================================================= */
+
+   LOGO
+
+================================================== */
+
+
 
 .logo {
+
     display: flex;
+
     align-items: center;
+
     gap: 10px;
+
     flex-shrink: 0;
+
     text-decoration: none;
+
 }
 
+
+
 .logo-img {
+
     width: 50px;
+
     height: 50px;
+
     object-fit: cover;
+
     border-radius: 50%;
+
 }
+
+
 
 .logo-text {
     display: flex;
     align-items: center;
     gap: 5px;
     white-space: nowrap;
-    font-size: 1.6rem;
-    font-weight: 800;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #68432f !important;
 }
 
-.logo-text .logo-cafe {
-    color: #000000 !important;
-}
-
+.logo-text,
+.logo-text span,
+.logo-text .logo-cafe,
 .logo-text .logo-aura {
-    color: var(--accent) !important;
+    color: #68432f !important;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 
 /* =========================================================
-   MENU
-========================================================= */
+
+   MENU
+
+================================================== */
+
+
 
 .menu {
+
     display: flex;
+
     align-items: center;
+
     gap: 28px;
+
 }
+
+
 
 .menu a {
+
     position: relative;
+
     color: var(--primary-dark);
+
     font-weight: bold;
+
     transition: 0.3s ease;
+
 }
+
+
 
 .menu a:hover {
+
     color: var(--accent);
+
 }
+
+
 
 .menu a.active {
+
     color: var(--primary);
+
 }
+
+
 
 .menu a.active::after {
+
     content: "";
+
     position: absolute;
+
     left: 0;
+
     right: 0;
+
     bottom: -8px;
+
     height: 2px;
+
     border-radius: 5px;
+
     background: var(--accent);
+
 }
+
+
 
 .menu-button {
+
     display: none;
+
     width: 42px;
+
     height: 42px;
+
     border: none;
+
     border-radius: 8px;
+
     background: transparent;
+
     color: var(--primary-dark);
+
     font-size: 1.6rem;
+
     cursor: pointer;
+
 }
 
 
+
+
+
 /* =========================================================
-   BOTÕES
-========================================================= */
+
+   BOTÕES
+
+================================================== */
+
+
 
 .button {
+
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 9px;
+
     padding: 13px 23px;
+
     border: none;
+
     border-radius: 30px;
+
     background: var(--primary);
+
     color: white;
+
     font-weight: bold;
+
     text-align: center;
+
     cursor: pointer;
+
     transition:
+
         background 0.3s ease,
+
         transform 0.3s ease,
+
         box-shadow 0.3s ease;
+
 }
+
+
 
 .button:hover {
+
     background: var(--primary-dark);
+
     transform: translateY(-2px);
+
     box-shadow: 0 8px 20px rgba(61, 37, 27, 0.15);
+
 }
+
+
 
 .button:disabled {
+
     opacity: 0.7;
+
     cursor: not-allowed;
+
     transform: none;
+
     box-shadow: none;
+
 }
+
+
 
 .small-button {
+
     padding: 9px 15px;
+
     border: none;
+
     border-radius: 22px;
+
     background: #efd1ae;
+
     color: var(--primary-dark);
+
     font-weight: bold;
+
     cursor: pointer;
+
     transition: 0.3s ease;
+
 }
+
+
 
 .small-button:hover {
+
     background: var(--accent);
+
     color: white;
+
 }
 
-<<<<<<< HEAD
+
+
+
+
 
 /* =========================================================
-   TEXTOS
-========================================================= */
-=======
+
+   TEXTOS
+
+================================================== */
+
+
 /* FILTRO DE CATEGORIAS */
 
+
+
 .filter-buttons {
+
     display: flex;
+
     justify-content: center;
+
     gap: 15px;
+
     margin-bottom: 40px;
+
     flex-wrap: wrap;
+
 }
+
+
 
 .filter-btn {
+
     padding: 12px 28px;
+
     border: 2px solid var(--accent);
+
     border-radius: 25px;
+
     background: transparent;
+
     color: var(--primary-dark);
+
     font-weight: bold;
+
     cursor: pointer;
+
     transition: 0.3s ease;
+
     font-size: 1rem;
+
 }
+
+
 
 .filter-btn:hover {
+
     background: var(--accent);
+
     color: white;
+
     transform: translateY(-2px);
+
 }
+
+
 
 .filter-btn.active {
+
     background: var(--accent);
+
     color: white;
+
     box-shadow: 0 5px 15px rgba(215, 155, 88, 0.3);
+
 }
+
+
 
 .product-card.hidden {
+
     display: none;
+
 }
+
+
 
 @keyframes fadeIn {
+
     from {
+
         opacity: 0;
+
         transform: translateY(10px);
+
     }
+
     to {
+
         opacity: 1;
+
         transform: translateY(0);
+
     }
+
 }
 
+
+
 .product-card {
+
     animation: fadeIn 0.3s ease;
+
 }
+
+
 
 /* TEXTOS */
->>>>>>> bfb9820f16b444f00b93d9db7c236fa87c526f66
+
+
+
 
 .subtitle {
+
     color: var(--accent);
+
     font-size: 0.78rem;
+
     font-weight: bold;
+
     letter-spacing: 0.13em;
+
     text-transform: uppercase;
+
 }
+
+
 
 .section {
+
     padding: 80px 0;
+
 }
+
+
 
 .section-title {
+
     margin-bottom: 40px;
+
     text-align: center;
+
 }
+
+
 
 .section-title h2 {
+
     margin: 8px 0 12px;
+
     color: var(--primary-dark);
+
     font-size: clamp(2rem, 4vw, 3rem);
+
     line-height: 1.15;
+
 }
+
+
 
 .section-title p {
+
     max-width: 650px;
+
     margin: 0 auto;
+
     color: var(--muted);
+
 }
 
 
+
+
+
 /* =========================================================
-   CARROSSEL
-========================================================= */
+
+   CARROSSEL
+
+================================================== */
+
+
 
 .carousel {
+
     position: relative;
+
     width: min(1180px, calc(100% - 32px));
+
     height: 530px;
+
     margin: 30px auto 0;
+
     overflow: hidden;
+
     border-radius: 28px;
+
     box-shadow: var(--shadow);
+
 }
+
+
 
 .carousel-track {
+
     display: flex;
+
     width: 100%;
+
     height: 100%;
+
     transition: transform 0.6s ease;
+
 }
+
+
 
 .slide {
+
     position: relative;
+
     min-width: 100%;
+
     height: 100%;
+
     background-position: center;
+
     background-size: cover;
+
 }
+
+
 
 .slide::before {
+
     content: "";
+
     position: absolute;
+
     inset: 0;
-    background: linear-gradient(
-        90deg,
-        rgba(29, 19, 15, 0.82),
-        rgba(29, 19, 15, 0.18)
-    );
+
+    background: linear-gradient(90deg,
+
+            rgba(29, 19, 15, 0.82),
+
+            rgba(29, 19, 15, 0.18));
+
 }
+
+
 
 .slide-one {
+
     background-image: url("https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1500&q=85");
+
 }
+
+
 
 .slide-two {
+
     background-image: url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1500&q=85");
+
 }
+
+
 
 .slide-three {
+
     background-image: url("https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1500&q=85");
+
 }
+
+
 
 .slide-content {
+
     position: relative;
+
     z-index: 2;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
+
     height: 100%;
+
     max-width: 700px;
+
     padding: 40px 8%;
+
     color: white;
+
 }
+
+
 
 .slide-content h1 {
+
     margin: 18px 0 14px;
+
     font-size: clamp(2.3rem, 5vw, 4.5rem);
+
     line-height: 1.05;
+
 }
+
+
 
 .slide-content p {
+
     max-width: 490px;
+
     margin-bottom: 26px;
+
     color: rgba(255, 255, 255, 0.86);
+
 }
+
+
 
 .slide-content .button {
+
     width: fit-content;
+
 }
+
+
 
 .tag {
+
     width: fit-content;
+
     padding: 8px 14px;
+
     border: 1px solid rgba(255, 255, 255, 0.3);
+
     border-radius: 30px;
+
     background: rgba(255, 255, 255, 0.13);
+
     font-size: 0.78rem;
+
     font-weight: bold;
+
     letter-spacing: 0.1em;
+
     text-transform: uppercase;
+
 }
 
 
+
+
+
 /* =========================================================
-   BOTÕES DO CARROSSEL
-========================================================= */
+
+   BOTÕES DO CARROSSEL
+
+================================================== */
+
+
 
 .carousel-button,
+
 .carousel-arrow {
+
     position: absolute;
+
     top: 50%;
+
     z-index: 5;
+
     width: 45px;
+
     height: 45px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     border: none;
+
     border-radius: 50%;
+
     background: rgba(255, 255, 255, 0.2);
+
     color: white;
+
     font-size: 1.2rem;
+
     cursor: pointer;
+
     transform: translateY(-50%);
+
     transition: 0.3s ease;
+
 }
+
+
 
 .carousel-button:hover,
+
 .carousel-arrow:hover {
+
     background: rgba(255, 255, 255, 0.35);
+
 }
+
+
 
 .carousel-button.previous,
+
 .carousel-arrow.previous {
+
     left: 20px;
+
 }
+
+
 
 .carousel-button.next,
+
 .carousel-arrow.next {
+
     right: 20px;
+
 }
 
 
+
+
+
 /* =========================================================
-   PONTOS DO CARROSSEL
-========================================================= */
+
+   PONTOS DO CARROSSEL
+
+================================================== */
+
+
 
 .carousel-dots {
+
     position: absolute;
+
     bottom: 22px;
+
     left: 50%;
+
     z-index: 6;
+
     display: flex;
+
     gap: 9px;
+
     transform: translateX(-50%);
+
 }
+
+
 
 .dot {
+
     width: 12px;
+
     height: 12px;
+
     padding: 0;
+
     border: 2px solid white;
+
     border-radius: 50%;
+
     background: transparent;
+
     cursor: pointer;
+
     transition: 0.3s ease;
+
 }
+
+
 
 .dot.active {
+
     background: white;
+
 }
 
 
+
+
+
 /* =========================================================
-   HISTÓRIA
-========================================================= */
+
+   HISTÓRIA
+
+================================================== */
+
+
 
 .history {
+
     padding: 90px 0;
+
 }
+
+
 
 .history-container {
+
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     align-items: center;
+
     gap: 55px;
+
 }
+
+
 
 .history-image img {
+
     width: 100%;
+
     height: 470px;
+
     border-radius: 25px;
+
     object-fit: cover;
+
     box-shadow: var(--shadow);
+
 }
+
+
 
 .history-content h2 {
+
     margin: 10px 0 20px;
+
     color: var(--primary-dark);
+
     font-size: clamp(2rem, 4vw, 3.2rem);
+
     line-height: 1.1;
+
 }
+
+
 
 .history-content p {
+
     margin-bottom: 16px;
+
     color: var(--muted);
+
 }
+
+
 
 .two-columns {
+
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     align-items: center;
+
     gap: 55px;
+
 }
+
+
 
 .rounded-image {
+
     width: 100%;
+
     height: 470px;
+
     border-radius: 25px;
+
     object-fit: cover;
+
     box-shadow: var(--shadow);
+
 }
+
+
 
 .text-content h2 {
+
     margin: 10px 0 20px;
+
     color: var(--primary-dark);
+
     font-size: clamp(2rem, 4vw, 3.2rem);
+
     line-height: 1.1;
+
 }
+
+
 
 .text-content p {
+
     margin-bottom: 16px;
+
     color: var(--muted);
+
 }
+
+
 
 .coffee-history {
+
     padding: 80px 0;
+
     background: #efe1d3;
+
 }
 
 
+
+
+
 /* =========================================================
-   GALERIA
-========================================================= */
+
+   GALERIA
+
+================================================== */
+
+
 
 .gallery-section {
+
     padding: 80px 0;
+
 }
+
+
 
 .section-heading {
+
     margin-bottom: 30px;
+
     text-align: center;
+
 }
+
+
 
 .section-heading h2 {
+
     margin: 8px 0;
+
     color: var(--primary-dark);
+
     font-size: clamp(2rem, 4vw, 3rem);
+
 }
+
+
 
 .section-heading p {
+
     color: var(--muted);
+
 }
+
+
 
 .gallery {
+
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 22px;
+
 }
+
+
 
 .gallery-grid {
+
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 22px;
+
 }
+
+
 
 .gallery-item {
+
     overflow: hidden;
+
     border-radius: 20px;
+
 }
+
+
 
 .gallery img,
+
 .gallery-item img {
+
     width: 100%;
+
     height: 300px;
+
     border-radius: 20px;
+
     object-fit: cover;
+
     transition: 0.3s ease;
+
 }
+
+
 
 .gallery img:hover,
+
 .gallery-item img:hover {
+
     transform: scale(1.03);
+
 }
 
 
+
+
+
 /* =========================================================
-   PÁGINAS
-========================================================= */
+
+   PÁGINAS
+
+================================================== */
+
+
 
 .page-section {
+
     padding: 90px 0;
+
     border-top: 1px solid var(--border);
+
 }
+
+
 
 .page-title {
+
     margin-bottom: 40px;
+
     text-align: center;
+
 }
+
+
 
 .page-title h1 {
+
     margin: 8px 0;
+
     color: var(--primary-dark);
+
     font-size: clamp(2.5rem, 5vw, 4rem);
+
 }
 
+
+
 .page-title p {
+
     color: var(--muted);
+
 }
+
+
+
 
 
 /* =========================================================
-   PRODUTOS
-========================================================= */
+
+   PRODUTOS
+
+================================================== */
+
+
 
 .filter-buttons {
+
     display: flex;
+
     justify-content: center;
+
     gap: 15px;
+
     margin-bottom: 40px;
+
     flex-wrap: wrap;
+
 }
+
+
 
 .filter-btn {
+
     padding: 12px 28px;
+
     border: 2px solid var(--accent);
+
     border-radius: 25px;
+
     background: transparent;
+
     color: var(--primary-dark);
+
     font-weight: bold;
+
     cursor: pointer;
+
     transition: 0.3s ease;
+
 }
+
+
 
 .filter-btn:hover {
+
     background: var(--accent);
+
     color: white;
+
     transform: translateY(-2px);
+
 }
+
+
 
 .filter-btn.active {
+
     background: var(--accent);
+
     color: white;
+
 }
+
+
 
 .products-grid {
+
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 25px;
+
 }
+
+
 
 .product-card {
+
     overflow: hidden;
+
     border: 1px solid var(--border);
+
     border-radius: 22px;
+
     background: var(--card);
+
     box-shadow: 0 8px 25px rgba(61, 37, 27, 0.06);
+
     animation: fadeIn 0.3s ease;
+
 }
+
+
 
 .product-card.hidden {
+
     display: none;
+
 }
+
+
 
 .product-card img,
+
 .product-image img {
+
     width: 100%;
+
     height: 245px;
+
     object-fit: cover;
+
 }
+
+
 
 .product-info,
+
 .product-content {
+
     padding: 22px;
+
 }
+
+
 
 .category {
+
     color: var(--accent);
+
     font-size: 0.75rem;
+
     font-weight: bold;
+
     letter-spacing: 0.08em;
+
     text-transform: uppercase;
+
 }
+
+
 
 .product-info h2,
+
 .product-content h3 {
+
     margin: 7px 0;
+
     color: var(--primary-dark);
+
     font-size: 1.35rem;
+
 }
+
+
 
 .product-info p,
+
 .product-content p {
+
     min-height: 52px;
+
     color: var(--muted);
+
 }
+
+
 
 .product-footer {
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     gap: 15px;
+
     margin-top: 18px;
+
 }
+
+
 
 .product-footer strong {
+
     color: var(--primary-dark);
+
     font-size: 1.3rem;
+
 }
 
+
+
 .section-button {
+
     display: flex;
+
     justify-content: center;
+
     margin-top: 40px;
+
 }
+
+
 
 @keyframes fadeIn {
 
+
+
     from {
+
         opacity: 0;
+
         transform: translateY(10px);
+
     }
+
+
 
     to {
+
         opacity: 1;
+
         transform: translateY(0);
+
     }
 
+
+
 }
 
 
+
+
+
 /* =========================================================
-   PEDIDOS
-========================================================= */
+
+   PEDIDOS
+
+================================================== */
+
+
 
 .order-layout {
+
     display: flex;
+
     justify-content: center;
+
     width: 100%;
+
     margin: 0 auto;
+
 }
+
+
 
 .order-form-area {
+
     width: 100%;
+
     max-width: 650px;
+
     margin: 0 auto;
+
 }
 
 
+
+
+
 /* =========================================================
-   LOGIN NO PEDIDO
-========================================================= */
+
+   LOGIN NO PEDIDO
+
+================================================== */
+
+
 
 .login-box {
+
     display: flex;
+
     align-items: center;
+
     gap: 22px;
+
     width: 100%;
+
     min-height: 140px;
+
     margin-bottom: 25px;
+
     padding: 30px;
+
     border: 1px solid var(--border);
+
     border-radius: 22px;
+
     background: #f0e2d4;
+
     box-shadow: 0 8px 25px rgba(61, 37, 27, 0.08);
+
 }
+
+
 
 .login-icon {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     flex-shrink: 0;
+
     width: 65px;
+
     height: 65px;
+
     border-radius: 50%;
+
     background: var(--primary);
+
     color: white;
+
     font-size: 1.5rem;
+
 }
+
+
 
 .login-box-content {
+
     flex: 1;
+
     min-width: 0;
+
 }
+
+
 
 .login-box h3 {
+
     margin-bottom: 6px;
+
     color: var(--primary-dark);
+
     font-size: 1.35rem;
+
 }
+
+
 
 .login-box p {
+
     color: var(--muted);
+
     font-size: 1rem;
+
 }
+
+
 
 .login-order-button {
+
     flex-shrink: 0;
+
     min-width: 150px;
+
     min-height: 48px;
+
     white-space: nowrap;
+
     font-size: 1rem;
+
 }
 
 
+
+
+
 /* =========================================================
-   FORMULÁRIO DE PEDIDO
-========================================================= */
+
+   FORMULÁRIO DE PEDIDO
+
+================================================== */
+
+
 
 .form-card {
+
     width: 100%;
+
     padding: 35px;
+
     border: 1px solid var(--border);
+
     border-radius: 22px;
+
     background: var(--card);
+
     box-shadow: var(--shadow);
+
 }
+
+
 
 .form-title {
+
     margin-bottom: 15px;
+
     color: var(--primary-dark);
+
     font-size: 1.5rem;
+
 }
+
+
 
 .form-card label {
+
     display: block;
+
     margin: 15px 0 7px;
+
     color: var(--primary-dark);
+
     font-weight: bold;
+
 }
+
+
 
 .form-card input,
+
 .form-card select,
+
 .form-card textarea {
+
     width: 100%;
+
     padding: 13px 15px;
+
     border: 1px solid var(--border);
+
     border-radius: 10px;
+
     outline: none;
+
     background: white;
+
     color: var(--text);
+
     transition: border-color 0.3s ease;
+
 }
+
+
 
 .form-card input:focus,
+
 .form-card select:focus,
+
 .form-card textarea:focus {
+
     border-color: var(--accent);
+
 }
+
+
 
 .form-card textarea {
+
     resize: vertical;
+
 }
+
+
 
 .order-button {
+
     width: 100%;
+
     margin-top: 22px;
+
 }
 
 
+
+
+
 /* =========================================================
-   LOGIN DO CLIENTE
-========================================================= */
+
+   LOGIN DO CLIENTE
+
+================================================== */
+
+
 
 .login-section {
+
     display: flex;
+
     justify-content: center;
+
     padding: 90px 16px;
+
     border-top: 1px solid var(--border);
+
     background: #efe1d3;
+
 }
+
+
 
 .login-card {
+
     width: min(450px, 100%);
+
     padding: 35px;
+
     border: 1px solid var(--border);
+
     border-radius: 22px;
+
     background: var(--card);
+
     box-shadow: var(--shadow);
+
 }
+
+
 
 .login-card h1 {
+
     margin: 8px 0;
+
     color: var(--primary-dark);
+
 }
 
-.login-card > p {
+
+
+.login-card>p {
+
     color: var(--muted);
+
 }
+
+
 
 .login-card label {
+
     display: block;
+
     margin: 15px 0 7px;
+
     color: var(--primary-dark);
+
     font-weight: bold;
+
 }
+
+
 
 .login-card input {
+
     width: 100%;
+
     padding: 13px 15px;
+
     border: 1px solid var(--border);
+
     border-radius: 10px;
+
     outline: none;
+
     background: white;
+
 }
+
+
 
 .login-card input:focus {
+
     border-color: var(--accent);
+
 }
+
+
 
 .login-button {
+
     width: 100%;
+
     margin-top: 24px;
+
 }
+
+
 
 .remember {
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     gap: 10px;
+
     margin-top: 16px;
+
 }
+
+
 
 .remember label {
+
     display: flex;
+
     align-items: center;
+
     gap: 7px;
+
     margin: 0;
+
     font-weight: normal;
+
 }
+
+
 
 .remember input {
+
     width: auto;
+
 }
+
+
 
 .remember a,
+
 .register a {
+
     color: var(--primary);
+
     font-weight: bold;
+
 }
+
+
 
 .register {
+
     margin-top: 22px;
+
     text-align: center;
+
 }
 
 
+
+
+
 /* =========================================================
-   ADMINISTRATIVO
-========================================================= */
+
+   ADMINISTRATIVO
+
+================================================== */
+
+
 
 .admin-section {
+
     min-height: 100vh;
+
     padding: 70px 0 90px;
+
     background: var(--background);
+
 }
 
 
+
+
+
 /* =========================================================
-   LOGIN DO FUNCIONÁRIO
-========================================================= */
+
+   LOGIN DO FUNCIONÁRIO
+
+================================================== */
+
+
 
 .admin-login-section {
+
     min-height: calc(100vh - 78px);
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     padding: 70px 20px;
+
     background: var(--background);
+
 }
+
+
 
 .admin-login-section .container {
+
     width: 100%;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
 }
 
 
+
+
+
 /* =========================================================
-   CARD DO LOGIN
-========================================================= */
+
+   CARD DO LOGIN
+
+================================================== */
+
+
 
 .admin-login-card,
+
 .admin-login-box {
+
     width: 100%;
+
     max-width: 480px;
+
     margin: 0 auto;
+
     padding: 42px;
+
     border: 1px solid var(--border);
+
     border-radius: 24px;
+
     background: var(--card);
+
     box-shadow: var(--shadow);
+
     text-align: center;
+
 }
 
 
+
+
+
 /* =========================================================
-   ÍCONE DO LOGIN
-========================================================= */
+
+   ÍCONE DO LOGIN
+
+================================================== */
+
+
 
 .admin-login-icon {
+
     width: 75px;
+
     height: 75px;
+
     margin: 0 auto 24px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     border-radius: 50%;
+
     background: var(--primary);
+
     color: white;
+
     font-size: 1.8rem;
+
     box-shadow: 0 8px 20px rgba(104, 67, 47, 0.18);
+
 }
 
 
+
+
+
 /* =========================================================
-   TEXTOS DO LOGIN
-========================================================= */
+
+   TEXTOS DO LOGIN
+
+================================================== */
+
+
 
 .admin-login-card .subtitle,
+
 .admin-login-box .subtitle {
+
     display: block;
+
     margin-bottom: 8px;
+
 }
+
+
 
 .admin-login-card h1,
+
 .admin-login-box h1 {
+
     margin-bottom: 12px;
+
     color: var(--primary-dark);
+
     font-size: clamp(2rem, 4vw, 2.7rem);
+
     line-height: 1.15;
+
 }
 
-.admin-login-card > p,
-.admin-login-box > p {
+
+
+.admin-login-card>p,
+
+.admin-login-box>p {
+
     margin-bottom: 30px;
+
     color: var(--muted);
+
 }
+
+
+
 
 
 /* =========================================================
-   FORMULÁRIO DO FUNCIONÁRIO
-========================================================= */
+
+   FORMULÁRIO DO FUNCIONÁRIO
+
+================================================== */
+
+
 
 .admin-login-form {
+
     width: 100%;
+
     text-align: left;
+
 }
+
+
 
 .admin-login-form .form-group {
+
     width: 100%;
+
     margin-bottom: 20px;
+
 }
+
+
 
 .admin-login-form label {
+
     display: block;
+
     margin-bottom: 8px;
+
     color: var(--primary-dark);
+
     font-weight: bold;
+
 }
+
+
 
 .admin-login-form input {
+
     width: 100%;
+
     height: 52px;
+
     padding: 0 15px;
+
     border: 1px solid var(--border);
+
     border-radius: 10px;
+
     outline: none;
+
     background: white;
+
     color: var(--text);
+
     font-size: 1rem;
+
     transition:
+
         border-color 0.3s ease,
+
         box-shadow 0.3s ease;
+
 }
+
+
 
 .admin-login-form input:focus {
+
     border-color: var(--accent);
+
     box-shadow: 0 0 0 3px rgba(104, 67, 47, 0.10);
+
 }
+
+
 
 .admin-login-form input::placeholder {
+
     color: #a18f84;
+
 }
 
 
+
+
+
 /* =========================================================
-   MENSAGEM DE ERRO
-========================================================= */
+
+   MENSAGEM DE ERRO
+
+================================================== */
+
+
 
 .admin-login-error {
+
     min-height: 24px;
+
     margin: 0 0 10px;
+
     color: var(--danger);
+
     font-size: 0.9rem;
+
     font-weight: bold;
+
     text-align: center;
+
 }
 
 
+
+
+
 /* =========================================================
-   BOTÃO DO LOGIN
-========================================================= */
+
+   BOTÃO DO LOGIN
+
+================================================== */
+
+
 
 .admin-login-form .button {
+
     width: 100%;
+
     min-height: 52px;
+
     margin-top: 5px;
+
 }
 
 
+
+
+
 /* =========================================================
-   INFORMAÇÃO DO LOGIN
-========================================================= */
+
+   INFORMAÇÃO DO LOGIN
+
+================================================== */
+
+
 
 .admin-login-info {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 8px;
+
     margin-top: 22px;
+
     color: var(--muted);
+
     font-size: 0.85rem;
+
 }
+
+
 
 .admin-login-info i {
+
     color: var(--primary);
+
 }
 
 
+
+
+
 /* =========================================================
-   COMPATIBILIDADE COM ESTRUTURAS ANTIGAS
-========================================================= */
+
+   COMPATIBILIDADE COM ESTRUTURAS ANTIGAS
+
+================================================== */
+
+
 
 .admin-login-content {
+
     width: 100%;
+
 }
+
+
 
 .admin-login-content .subtitle {
+
     display: block;
+
     margin-bottom: 8px;
+
     text-align: center;
+
 }
+
+
 
 .admin-login-content h1 {
+
     margin-bottom: 12px;
+
     color: var(--primary-dark);
+
     text-align: center;
+
     font-size: clamp(2rem, 4vw, 2.7rem);
+
 }
 
-.admin-login-content > p {
+
+
+.admin-login-content>p {
+
     margin-bottom: 30px;
+
     color: var(--muted);
+
     text-align: center;
+
 }
+
+
 
 .admin-login-content .form-group {
+
     margin-bottom: 20px;
+
 }
+
+
 
 .admin-login-content label {
+
     display: block;
+
     margin-bottom: 8px;
+
     color: var(--primary-dark);
+
     font-weight: bold;
+
 }
+
+
 
 .input-icon {
+
     position: relative;
+
     width: 100%;
+
 }
+
+
 
 .input-icon i {
+
     position: absolute;
+
     left: 17px;
+
     top: 50%;
+
     z-index: 2;
+
     color: var(--primary);
+
     transform: translateY(-50%);
+
 }
+
+
 
 .input-icon input {
+
     width: 100%;
+
     min-height: 52px;
+
     padding: 0 18px 0 48px;
+
     border: 1px solid var(--border);
+
     border-radius: 12px;
+
     outline: none;
+
     background: white;
+
     color: var(--text);
+
     font-size: 1rem;
+
     transition: 0.3s ease;
+
 }
+
+
 
 .input-icon input:focus {
+
     border-color: var(--accent);
+
     box-shadow: 0 0 0 3px rgba(104, 67, 47, 0.10);
+
 }
 
 
+
+
+
 /* =========================================================
-   CABEÇALHO DA ADMINISTRAÇÃO
-========================================================= */
+
+   CABEÇALHO DA ADMINISTRAÇÃO
+
+================================================== */
+
+
 
 .admin-header {
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     gap: 25px;
+
     width: 100%;
+
     min-height: 110px;
+
     margin-bottom: 30px;
+
     padding: 25px 30px;
+
     border: 1px solid var(--border);
+
     border-radius: 20px;
+
     background: var(--card);
+
     box-shadow: var(--shadow);
+
 }
+
+
 
 .admin-user {
+
     display: flex;
+
     align-items: center;
+
     gap: 15px;
+
 }
+
+
 
 .admin-icon {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     flex-shrink: 0;
+
     width: 58px;
+
     height: 58px;
+
     border-radius: 50%;
+
     background: var(--primary);
+
     color: white;
+
     font-size: 1.3rem;
+
 }
+
+
 
 .admin-user strong {
+
     display: block;
+
     color: var(--primary-dark);
+
     font-size: 1.1rem;
+
 }
+
+
 
 .admin-user span {
+
     display: block;
+
     margin-top: 3px;
+
     color: var(--muted);
+
     font-size: 0.9rem;
+
 }
+
+
 
 .admin-header .button {
+
     flex-shrink: 0;
+
 }
 
 
+
+
+
 /* =========================================================
-   TÍTULO ADMINISTRATIVO
-========================================================= */
+
+   TÍTULO ADMINISTRATIVO
+
+================================================== */
+
+
 
 .admin-title {
+
     margin-bottom: 30px;
+
 }
+
+
 
 .admin-title .subtitle {
+
     display: block;
+
     margin-bottom: 8px;
+
 }
+
+
 
 .admin-title h1 {
+
     margin-bottom: 8px;
+
     color: var(--primary-dark);
+
     font-size: clamp(2rem, 4vw, 3rem);
+
     line-height: 1.15;
+
 }
+
+
 
 .admin-title p {
+
     color: var(--muted);
+
 }
 
 
+
+
+
 /* =========================================================
-   COMPATIBILIDADE COM ADMIN ANTIGO
-========================================================= */
+
+   COMPATIBILIDADE COM ADMIN ANTIGO
+
+================================================== */
+
+
 
 .admin-header-info {
+
     display: flex;
+
     align-items: center;
+
     gap: 20px;
+
 }
+
+
 
 .admin-user p {
+
     margin-bottom: 3px;
+
     color: var(--muted);
+
     font-size: 0.95rem;
+
 }
+
+
 
 .admin-user h2 {
+
     color: var(--primary-dark);
+
     font-size: 1.5rem;
+
 }
+
+
 
 .admin-restricted {
+
     display: flex;
+
     align-items: center;
+
     gap: 8px;
+
     color: var(--muted);
+
     font-weight: bold;
+
 }
 
 
+
+
+
 /* =========================================================
-   BOTÃO SAIR
-========================================================= */
+
+   BOTÃO SAIR
+
+================================================== */
+
+
 
 .admin-logout-area {
+
     display: flex;
+
     justify-content: flex-end;
+
     margin-bottom: 25px;
+
 }
+
+
 
 .admin-logout-button {
+
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 9px;
+
     min-height: 44px;
+
     padding: 10px 20px;
+
     border: 1px solid var(--border);
+
     border-radius: 25px;
+
     background: var(--card);
+
     color: var(--danger);
+
     font-weight: bold;
+
     cursor: pointer;
+
     transition: 0.3s ease;
+
 }
+
+
 
 .admin-logout-button:hover {
+
     background: #f8e4e1;
+
     border-color: var(--danger);
+
     transform: translateY(-2px);
+
 }
 
 
+
+
+
 /* =========================================================
-   BOTÕES DE STATUS
-========================================================= */
+
+   BOTÕES DE STATUS
+
+================================================== */
+
+
 
 .order-status-buttons {
+
     display: flex;
+
     align-items: center;
+
     gap: 12px;
+
     margin-bottom: 30px;
+
 }
+
+
 
 .status-button {
+
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 9px;
+
     min-height: 48px;
+
     padding: 11px 20px;
+
     border: 1px solid var(--border);
+
     border-radius: 25px;
+
     background: var(--card);
+
     color: var(--primary-dark);
+
     font-weight: bold;
+
     cursor: pointer;
+
     transition: 0.3s ease;
+
 }
+
+
 
 .status-button:hover {
+
     border-color: var(--accent);
+
     background: #f0e2d4;
+
     transform: translateY(-2px);
+
 }
+
+
 
 .status-button.active {
+
     border-color: var(--primary);
+
     background: var(--primary);
+
     color: white;
+
     box-shadow: 0 6px 18px rgba(104, 67, 47, 0.18);
+
 }
+
+
 
 .status-count {
+
     min-width: 25px;
+
     height: 25px;
+
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
+
     padding: 0 7px;
+
     border-radius: 50%;
+
     background: rgba(255, 255, 255, 0.18);
+
     font-size: 0.8rem;
+
 }
 
 
+
+
+
 /* =========================================================
-   ÁREA DOS PEDIDOS
-========================================================= */
+
+   ÁREA DOS PEDIDOS
+
+================================================== */
+
+
 
 .admin-orders {
+
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 30px;
+
     width: 100%;
+
 }
 
 
+
+
+
 /* =========================================================
-   PAINEL DE PEDIDOS
-========================================================= */
+
+   PAINEL DE PEDIDOS
+
+================================================== */
+
+
 
 .orders-panel {
+
     width: 100%;
+
     min-width: 0;
+
     margin-bottom: 25px;
+
     padding: 28px;
+
     border: 1px solid var(--border);
+
     border-radius: 22px;
+
     background: var(--card);
+
     box-shadow: 0 8px 25px rgba(61, 37, 27, 0.07);
+
 }
+
+
 
 .orders-panel-header {
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     gap: 15px;
+
     margin-bottom: 22px;
+
 }
+
+
 
 .orders-panel-header h2 {
+
     color: var(--primary-dark);
+
     font-size: 1.45rem;
+
 }
+
+
 
 .orders-panel-header .subtitle {
+
     display: block;
+
     margin-bottom: 5px;
+
 }
 
 
+
+
+
 /* =========================================================
-   LISTA DE PEDIDOS
-========================================================= */
+
+   LISTA DE PEDIDOS
+
+================================================== */
+
+
 
 .orders-list {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 18px;
+
 }
 
 
+
+
+
 /* =========================================================
-   CARD DO PEDIDO
-========================================================= */
+
+   CARD DO PEDIDO
+
+================================================== */
+
+
 
 .order-admin-card {
+
     display: flex;
+
     align-items: flex-start;
+
     justify-content: space-between;
+
     gap: 25px;
+
     padding: 22px;
+
     border: 1px solid var(--border);
+
     border-left: 4px solid var(--accent);
+
     border-radius: 16px;
+
     background: #fffdf9;
+
     box-shadow: 0 5px 18px rgba(61, 37, 27, 0.06);
+
     transition: 0.3s ease;
+
 }
+
+
 
 .order-admin-card:hover {
+
     transform: translateY(-2px);
+
     box-shadow: 0 10px 25px rgba(61, 37, 27, 0.1);
+
 }
+
+
 
 .order-admin-card.finished {
+
     border-left-color: var(--success);
+
 }
+
+
 
 .order-admin-info {
+
     flex: 1;
+
     display: grid;
+
     gap: 8px;
+
 }
+
+
 
 .order-admin-info h3 {
+
     margin-bottom: 5px;
+
     color: var(--primary-dark);
+
     font-size: 1.15rem;
+
 }
+
+
 
 .order-admin-info p {
+
     color: var(--muted);
+
     overflow-wrap: anywhere;
+
 }
+
+
 
 .order-admin-info strong {
+
     color: var(--primary-dark);
+
 }
+
+
 
 .order-admin-actions {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     flex-shrink: 0;
+
     gap: 10px;
+
 }
+
+
 
 .order-admin-actions .button {
+
     min-height: 42px;
+
     padding: 9px 17px;
+
     white-space: nowrap;
+
     font-size: 0.9rem;
+
 }
 
 
+
+
+
 /* =========================================================
-   PEDIDOS VAZIOS
-========================================================= */
+
+   PEDIDOS VAZIOS
+
+================================================== */
+
+
 
 .empty-orders {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     flex-direction: column;
+
     min-height: 220px;
+
     padding: 30px;
+
     text-align: center;
+
 }
+
+
 
 .empty-orders i {
+
     margin-bottom: 15px;
+
     color: var(--accent);
+
     font-size: 2.5rem;
+
 }
+
+
 
 .empty-orders h3 {
+
     margin-bottom: 6px;
+
     color: var(--primary-dark);
+
     font-size: 1.2rem;
+
 }
+
+
 
 .empty-orders p {
+
     max-width: 380px;
+
     color: var(--muted);
+
 }
 
 
+
+
+
 /* =========================================================
-   CONTADORES
-========================================================= */
+
+   CONTADORES
+
+================================================== */
+
+
 
 #pendingCount,
+
 #finishedCount {
+
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
+
     min-width: 25px;
+
 }
 
 
+
+
+
 /* =========================================================
-   FOOTER
-========================================================= */
+
+   FOOTER
+
+================================================== */
+
+
 
 .footer {
+
     padding: 45px 0 0;
+
     background: #1d130f;
+
     color: rgba(255, 255, 255, 0.75);
+
 }
+
+
 
 .footer-container {
+
     display: grid;
+
     grid-template-columns: 1.2fr 1fr 1.2fr;
+
     gap: 50px;
+
 }
+
+
 
 .footer-column {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 10px;
+
 }
+
+
 
 .footer-column h3 {
+
     margin-bottom: 5px;
+
     color: white;
+
     font-size: 1.2rem;
+
 }
+
+
 
 .footer-column p {
+
     max-width: 320px;
+
     color: rgba(255, 255, 255, 0.68);
+
 }
+
+
 
 .footer-column a {
+
     display: flex;
+
     align-items: center;
+
     gap: 9px;
+
     color: rgba(255, 255, 255, 0.7);
+
     transition: 0.3s ease;
+
 }
+
+
 
 .footer-column a:hover {
+
     color: white;
+
     transform: translateX(3px);
+
 }
+
+
 
 .footer-column a i,
+
 .footer-column p i {
+
     width: 20px;
+
     flex-shrink: 0;
+
     color: var(--accent);
+
     text-align: center;
+
 }
+
+
 
 .footer-bottom {
+
     width: 100%;
+
     margin-top: 40px;
+
     padding: 20px 16px;
+
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+
     text-align: center;
+
     color: rgba(255, 255, 255, 0.5);
+
     font-size: 0.85rem;
+
 }
 
 
+
+
+
 /* =========================================================
-   COMPATIBILIDADE COM FOOTER ANTIGO
-========================================================= */
+
+   COMPATIBILIDADE COM FOOTER ANTIGO
+
+================================================== */
+
+
 
 .footer-content {
+
     display: grid;
+
     grid-template-columns: 1.2fr 1fr 1.2fr;
+
     gap: 50px;
+
 }
+
+
 
 .footer-info {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 10px;
+
 }
+
+
 
 .footer-info h3 {
+
     color: white;
+
     font-size: 1.5rem;
+
 }
+
+
 
 .footer-info p {
+
     max-width: 280px;
+
     color: rgba(255, 255, 255, 0.65);
+
 }
+
+
 
 .footer-social h3,
+
 .footer-contact h3 {
+
     margin-bottom: 18px;
+
     color: white;
+
     font-size: 1.1rem;
+
 }
+
+
 
 .social-icons {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 12px;
+
 }
+
+
 
 .social-icons a {
+
     display: flex;
+
     align-items: center;
+
     gap: 10px;
+
     color: rgba(255, 255, 255, 0.7);
+
     transition: 0.3s ease;
+
 }
+
+
 
 .social-icons a:hover {
+
     color: white;
+
     transform: translateX(3px);
+
 }
+
+
 
 .footer-contact {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 12px;
+
 }
 
+
+
 .footer-contact a {
+
     display: flex;
+
     align-items: center;
+
     gap: 10px;
+
     color: rgba(255, 255, 255, 0.7);
+
     overflow-wrap: anywhere;
+
 }
+
+
+
 
 
 /* =========================================================
-   RESPONSIVIDADE - TABLET
-========================================================= */
+
+   RESPONSIVIDADE - TABLET
+
+================================================== */
+
+
 
 @media (max-width: 900px) {
 
+
+
     .products-grid {
+
         grid-template-columns: repeat(2, 1fr);
+
     }
+
+
 
     .two-columns,
+
     .history-container {
+
         grid-template-columns: 1fr;
+
     }
+
+
 
     .rounded-image,
+
     .history-image img {
+
         height: 350px;
+
     }
+
+
 
     .admin-orders {
+
         grid-template-columns: 1fr;
+
     }
+
+
 
     .footer-container,
+
     .footer-content {
+
         grid-template-columns: 1fr 1fr;
+
     }
+
+
 
     .order-admin-card {
+
         flex-direction: column;
+
     }
+
+
 
     .order-admin-actions {
+
         width: 100%;
+
         justify-content: flex-start;
+
     }
+
 }
 
-<<<<<<< HEAD
+
+
+
+
 
 /* =========================================================
-   RESPONSIVIDADE - CELULAR
-========================================================= */
 
-=======
->>>>>>> bfb9820f16b444f00b93d9db7c236fa87c526f66
+   RESPONSIVIDADE - CELULAR
+
+================================================== */
+
+
+
+
+
 @media (max-width: 650px) {
 
+
+
     .container {
+
         width: min(100% - 24px, 1180px);
+
     }
 
 
+
+
+
     /* =====================================================
-       HEADER
-    ===================================================== */
+
+       HEADER
+
+    ===================================================== */
+
+
 
     .header-container {
+
         position: relative;
+
         min-height: 70px;
+
         flex-wrap: wrap;
+
     }
+
+
 
     .navbar {
+
         position: relative;
+
         flex-wrap: wrap;
+
         padding: 15px 0;
+
     }
+
+
 
     .menu-button {
-<<<<<<< HEAD
+
+
         display: flex;
+
         align-items: center;
+
         justify-content: center;
-=======
+
+
         display: block;
+
     }
+
+
 
     .header-button {
+
         display: none;
->>>>>>> bfb9820f16b444f00b93d9db7c236fa87c526f66
+
+
     }
+
+
 
     .menu {
+
         display: none;
+
         width: 100%;
+
         flex-direction: column;
+
         align-items: stretch;
+
         gap: 0;
+
         padding: 12px 0;
+
     }
 
-<<<<<<< HEAD
+
+
+
     .menu.open,
+
     .menu.active {
+
         display: flex;
+
     }
+
+
 
     .menu a {
+
         padding: 12px 10px;
+
         border-bottom: 1px solid var(--border);
+
     }
+
+
 
     .menu a:last-child {
+
         border-bottom: none;
+
     }
+
+
 
     .menu a.active::after {
+
         display: none;
+
     }
 
 
+
+
+
     /* =====================================================
-       LOGO NO CELULAR
-    ===================================================== */
+
+       LOGO NO CELULAR
+
+    ===================================================== */
+
+
 
     .logo-text {
-        font-size: 1.35rem;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #68432f;
     }
+
+
 
     .logo-img {
-        width: 45px;
-        height: 45px;
+        width: 42px;
+        height: 42px;
     }
+
+
+
 
 
     /* =====================================================
-       CARROSSEL
-    ===================================================== */
+
+       CARROSSEL
+
+    ===================================================== */
+
+
 
     .carousel {
+
         width: calc(100% - 24px);
+
         height: 500px;
+
         margin-top: 18px;
+
         border-radius: 20px;
+
     }
 
-=======
+
+
+
     .menu.open {
+
         display: flex;
+
     }
+
+
 
     .carousel {
+
         height: 500px;
+
     }
 
->>>>>>> bfb9820f16b444f00b93d9db7c236fa87c526f66
+
+
+
     .slide-content {
+
         padding: 30px;
+
     }
 
-<<<<<<< HEAD
+
+
+
     .slide-content h1 {
+
         font-size: 2.3rem;
+
     }
+
+
 
     .carousel-button,
-=======
->>>>>>> bfb9820f16b444f00b93d9db7c236fa87c526f66
+
+
+
     .carousel-arrow {
+
         display: none;
+
     }
 
-<<<<<<< HEAD
+
+
+
+
 
     /* =====================================================
-       PRODUTOS
-    ===================================================== */
 
-=======
->>>>>>> bfb9820f16b444f00b93d9db7c236fa87c526f66
+       PRODUTOS
+
+    ===================================================== */
+
+
+
+
+
     .products-grid,
+
     .gallery,
+
     .gallery-grid {
+
         grid-template-columns: 1fr;
+
     }
 
-<<<<<<< HEAD
+
+
+
     .gallery img,
+
     .gallery-item img {
+
         height: 260px;
+
     }
 
 
-    /* =====================================================
-       FORMULÁRIOS
-    ===================================================== */
 
-=======
+
+
+    /* =====================================================
+
+       FORMULÁRIOS
+
+    ===================================================== */
+
+
+
+
     .gallery img {
+
         height: 260px;
+
     }
 
->>>>>>> bfb9820f16b444f00b93d9db7c236fa87c526f66
+
+
+
     .form-card,
+
     .login-card {
+
         padding: 25px 20px;
+
     }
 
-<<<<<<< HEAD
+
+
+
+
 
     /* =====================================================
-       FOOTER
-    ===================================================== */
+
+       FOOTER
+
+    ===================================================== */
+
+
 
     .footer-container,
-=======
->>>>>>> bfb9820f16b444f00b93d9db7c236fa87c526f66
+
+
+
     .footer-content {
+
         grid-template-columns: 1fr;
+
         gap: 30px;
+
     }
 
-<<<<<<< HEAD
+
+
+
+
 
     /* =====================================================
-       LOGIN
-    ===================================================== */
 
-=======
->>>>>>> bfb9820f16b444f00b93d9db7c236fa87c526f66
+       LOGIN
+
+    ===================================================== */
+
+
+
+
+
     .remember {
+
         align-items: flex-start;
+
         flex-direction: column;
+
     }
 
-<<<<<<< HEAD
+
+
+
+
 
     /* =====================================================
-       FILTROS
-    ===================================================== */
 
-=======
->>>>>>> bfb9820f16b444f00b93d9db7c236fa87c526f66
+       FILTROS
+
+    ===================================================== */
+
+
+
+
+
     .filter-buttons {
+
         gap: 10px;
+
     }
+
+
 
     .filter-btn {
+
         padding: 10px 18px;
+
         font-size: 0.9rem;
+
     }
-<<<<<<< HEAD
+
+
+
+
 
 
     /* =====================================================
-       LOGIN DO PEDIDO
-    ===================================================== */
+
+       LOGIN DO PEDIDO
+
+    ===================================================== */
+
+
 
     .order-form-area {
+
         max-width: 100%;
+
     }
+
+
 
     .login-box {
+
         align-items: center;
+
         flex-wrap: wrap;
+
         min-height: 150px;
+
         padding: 25px;
+
     }
+
+
 
     .login-icon {
+
         width: 58px;
+
         height: 58px;
+
         font-size: 1.3rem;
+
     }
+
+
 
     .login-box-content {
+
         flex: 1;
+
     }
+
+
 
     .login-box h3 {
+
         font-size: 1.15rem;
+
     }
+
+
 
     .login-box p {
+
         font-size: 0.9rem;
+
     }
+
+
 
     .login-order-button {
+
         width: 100%;
+
         min-height: 50px;
+
         margin-top: 8px;
+
     }
 
 
+
+
+
     /* =====================================================
-       LOGIN DO FUNCIONÁRIO
-    ===================================================== */
+
+       LOGIN DO FUNCIONÁRIO
+
+    ===================================================== */
+
+
 
     .admin-login-section {
+
         min-height: calc(100vh - 70px);
+
         padding: 45px 0;
+
     }
+
+
 
     .admin-login-card,
+
     .admin-login-box {
+
         padding: 30px 22px;
+
         border-radius: 18px;
+
     }
+
+
 
     .admin-login-icon {
+
         width: 65px;
+
         height: 65px;
+
         margin-bottom: 20px;
+
         font-size: 1.5rem;
+
     }
+
+
 
     .admin-login-card h1,
+
     .admin-login-box h1 {
+
         font-size: 1.8rem;
+
     }
 
-    .admin-login-card > p,
-    .admin-login-box > p {
+
+
+    .admin-login-card>p,
+
+    .admin-login-box>p {
+
         font-size: 0.9rem;
+
     }
+
+
 
     .admin-login-form input {
+
         height: 50px;
+
         font-size: 0.95rem;
+
     }
+
+
 
     .admin-login-form .button {
+
         min-height: 50px;
+
         padding: 12px 15px;
+
         font-size: 0.9rem;
+
     }
 
 
+
+
+
     /* =====================================================
-       ADMINISTRATIVO
-    ===================================================== */
+
+       ADMINISTRATIVO
+
+    ===================================================== */
+
+
 
     .admin-section {
+
         padding: 45px 0 60px;
+
     }
+
+
 
     .admin-title {
+
         margin-bottom: 22px;
+
     }
+
+
 
     .admin-title h1 {
+
         font-size: 2rem;
+
     }
+
+
 
     .admin-header {
+
         align-items: flex-start;
+
         flex-direction: column;
+
         min-height: auto;
+
         padding: 22px;
+
         margin-bottom: 25px;
+
     }
+
+
 
     .admin-user {
+
         width: 100%;
+
     }
+
+
 
     .admin-icon {
+
         width: 52px;
+
         height: 52px;
+
         font-size: 1.2rem;
+
     }
+
+
 
     .admin-header .button {
+
         width: 100%;
+
     }
+
+
 
     .admin-user h2 {
+
         font-size: 1.25rem;
+
     }
+
+
 
     .admin-restricted {
+
         padding-left: 65px;
+
     }
 
 
+
+
+
     /* =====================================================
-       BOTÃO SAIR
-    ===================================================== */
+
+       BOTÃO SAIR
+
+    ===================================================== */
+
+
 
     .admin-logout-area {
+
         justify-content: stretch;
+
     }
+
+
 
     .admin-logout-button {
+
         width: 100%;
+
     }
 
 
+
+
+
     /* =====================================================
-       STATUS DOS PEDIDOS
-    ===================================================== */
+
+       STATUS DOS PEDIDOS
+
+    ===================================================== */
+
+
 
     .order-status-buttons {
+
         flex-direction: column;
+
         gap: 10px;
+
     }
+
+
 
     .status-button {
+
         width: 100%;
+
     }
 
 
+
+
+
     /* =====================================================
-       PAINÉIS
-    ===================================================== */
+
+       PAINÉIS
+
+    ===================================================== */
+
+
 
     .orders-panel {
+
         padding: 20px;
+
         border-radius: 18px;
+
     }
+
+
 
     .orders-panel-header {
+
         align-items: flex-start;
+
     }
 
 
+
+
+
     /* =====================================================
-       CARDS DE PEDIDOS
-    ===================================================== */
+
+       CARDS DE PEDIDOS
+
+    ===================================================== */
+
+
 
     .order-admin-card {
+
         flex-direction: column;
+
         padding: 18px;
+
     }
+
+
 
     .order-admin-actions {
+
         width: 100%;
+
         flex-direction: column;
+
         align-items: stretch;
+
     }
+
+
 
     .order-admin-actions .button {
+
         width: 100%;
+
     }
 
+
+
     .empty-orders {
+
         min-height: 180px;
+
         padding: 20px;
+
     }
+
+
+
 
 
     /* =====================================================
-       FOOTER
-    ===================================================== */
+
+       FOOTER
+
+    ===================================================== */
+
+
 
     .footer {
+
         padding-top: 35px;
+
     }
+
+
 
     .footer-bottom {
+
         margin-top: 30px;
+
     }
 
+
+
 }
-=======
+
+
+
+/* AJUSTE FINAL: texto do Café Aura preto, com pequeno espaço entre as palavras */
+.logo,
+.logo span,
+.logo-text,
+.logo-text span,
+.logo-text .logo-cafe,
+.logo-text .logo-aura {
+    color: #000000 !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
 }
->>>>>>> bfb9820f16b444f00b93d9db7c236fa87c526f66
+
+.logo>span,
+.logo-text .logo-aura {
+    margin-left: 4px;
+}

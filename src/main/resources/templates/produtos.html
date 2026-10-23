@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
 
     <title>Produtos - Café Aura</title>
 
     <link rel="stylesheet" href="../static/css/style.css">
-
-    <!-- Ícones -->
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-=======
-    <title>Produtos - Café Aura</title>
-    <link rel="stylesheet" href="../static/css/style.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <style>
         .filter-buttons {
             display: flex;
@@ -37,1201 +31,392 @@
             font-size: 1rem;
         }
 
-        .filter-btn:hover {
+        .filter-btn:hover,
+        .filter-btn.active {
             background: var(--accent);
             color: white;
             transform: translateY(-2px);
         }
 
-        .filter-btn.active {
-            background: var(--accent);
-            color: white;
-            box-shadow: 0 5px 15px rgba(215, 155, 88, 0.3);
-        }
-
         .product-card.hidden {
-            display: none;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .product-card {
-            animation: fadeIn 0.3s ease;
+            display: none !important;
         }
     </style>
->>>>>>> bfb9820f16b444f00b93d9db7c236fa87c526f66
 </head>
 
 <body>
 
-    <!-- =========================
-         HEADER
-    ========================== -->
-
+    <!-- CABEÇALHO -->
     <header class="header">
-
         <div class="container navbar">
-<<<<<<< HEAD
 
             <a href="index.html" class="logo">
-
-                <img
-                    src="../static/img/logotipo.jpg"
-                    alt="Logotipo Café Aura"
-                    class="logo-img"
-                >
-
-=======
-            <a href="index.html" class="logo">
->>>>>>> bfb9820f16b444f00b93d9db7c236fa87c526f66
+                <img src="../static/img/logotipo.jpg"
+                     alt="Logotipo Café Aura"
+                     class="logo-img">
                 Café <span>Aura</span>
-
             </a>
 
-
-            <button
-                class="menu-button"
-                id="menuButton"
-                type="button"
-            >
+            <button class="menu-button"
+                    id="menuButton"
+                    type="button"
+                    aria-label="Abrir menu">
                 ☰
             </button>
 
-
             <nav class="menu" id="menu">
-<<<<<<< HEAD
-
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="produtos.html">
-                    Produtos
-                </a>
-
-                <a href="pedidos.html">
-                    Pedidos
-                </a>
-
-                <a href="login.html">
-                    Login
-                </a>
-
-                <!-- ADMIN -->
-                <a href="administrativo.html">
-                    Admin
-                </a>
-
-=======
                 <a href="index.html">Home</a>
                 <a href="produtos.html">Produtos</a>
                 <a href="pedidos.html">Pedidos</a>
                 <a href="login.html">Login</a>
->>>>>>> bfb9820f16b444f00b93d9db7c236fa87c526f66
+                <a href="administrativo.html">Admin</a>
             </nav>
 
         </div>
-
     </header>
 
-
-    <!-- =========================
-         PRODUTOS
-    ========================== -->
-
+    <!-- CONTEÚDO PRINCIPAL -->
     <main>
-
         <section class="page-section container">
-<<<<<<< HEAD
 
-            <div class="page-title">
-
-                <span class="subtitle">
-                    Nossos produtos
-                </span>
-
-                <h1>
-                    Conheça nossos cafés especiais
-                </h1>
-
-                <p>
-                    Selecionados com cuidado para proporcionar a melhor experiência
-                </p>
-
-            </div>
-
-
-            <!-- FILTROS -->
-
-            <div class="filter-buttons">
-
-                <button class="filter-btn active" data-filter="todos">
-                    Todos
-                </button>
-
-                <button class="filter-btn" data-filter="cafe">
-                    Café
-                </button>
-
-                <button class="filter-btn" data-filter="doces">
-                    Doces
-                </button>
-
-                <button class="filter-btn" data-filter="salgados">
-                    Salgados
-                </button>
-
-            </div>
-
-
-            <!-- PRODUTOS -->
-
-            <div class="products-grid">
-
-
-                <!-- =========================
-                     CAFÉS
-                ========================== -->
-
-                <article class="product-card" data-category="cafe">
-
-                    <img src="../static/img/cafeexpresooriginal.avif" alt="Espresso">
-
-                    <div class="product-info">
-
-                        <span class="category">
-                            Café
-                        </span>
-
-                        <h2>
-                            Espresso
-                        </h2>
-
-                        <p>
-                            Café espresso intenso e aromático.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <strong>
-                                R$ 8,00
-                            </strong>
-
-                            <button
-                                class="small-button"
-                                type="button"
-                                data-name="Espresso"
-                                data-price="8.00"
-                            >
-                                Adicionar
-                            </button>
-
-=======
             <div class="page-title">
                 <span class="subtitle">Nossos produtos</span>
                 <h1>Conheça nossos cafés especiais</h1>
-                <p>Selecionados com cuidado para proporcionar a melhor experiência</p>
+                <p>
+                    Selecionados com cuidado para proporcionar
+                    a melhor experiência.
+                </p>
             </div>
 
+            <!-- FILTROS -->
             <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="todos">Todos</button>
-                <button class="filter-btn" data-filter="cafe">Café</button>
-                <button class="filter-btn" data-filter="doces">Doces</button>
-                <button class="filter-btn" data-filter="salgados">Salgados</button>
+                <button class="filter-btn active"
+                        data-filter="todos"
+                        type="button">Todos</button>
+
+                <button class="filter-btn"
+                        data-filter="cafe"
+                        type="button">Café</button>
+
+                <button class="filter-btn"
+                        data-filter="doces"
+                        type="button">Doces</button>
+
+                <button class="filter-btn"
+                        data-filter="salgados"
+                        type="button">Salgados</button>
             </div>
 
+            <!-- PRODUTOS -->
             <div class="products-grid">
+
                 <!-- CAFÉS -->
-                <div class="product-card" data-category="cafe">
-                    <img src="../static/img/cafeexpresso.avif" alt="Espresso">
+                <article class="product-card" data-category="cafe">
+                    <img src="../static/img/cafeexpresooriginal.avif" alt="Espresso">
                     <div class="product-info">
                         <span class="category">Café</span>
                         <h2>Espresso</h2>
-                        <p>Intenso e encorpado, perfeito para os apreciadores de café puro.</p>
+                        <p>Café espresso intenso e aromático.</p>
                         <div class="product-footer">
                             <strong>R$ 8,00</strong>
-                            <button class="small-button add-product" data-name="Espresso">Adicionar</button>
+                            <button class="small-button add-product"
+                                    type="button"
+                                    data-name="Espresso"
+                                    data-price="8.00">Adicionar</button>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="product-card" data-category="cafe">
-                    <img src="../static/img/cappucciono.avif" alt="Cappuccino">
+                <article class="product-card" data-category="cafe">
+                    <img src="../static/img/cappuccinooriginal.jpg" alt="Cappuccino">
                     <div class="product-info">
                         <span class="category">Café</span>
                         <h2>Cappuccino</h2>
-                        <p>Cremoso e suave, com leite espumado e um toque de chocolate.</p>
+                        <p>Café cremoso com leite vaporizado.</p>
                         <div class="product-footer">
                             <strong>R$ 12,00</strong>
-                            <button class="small-button add-product" data-name="Cappuccino">Adicionar</button>
+                            <button class="small-button add-product"
+                                    type="button"
+                                    data-name="Cappuccino"
+                                    data-price="12.00">Adicionar</button>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="product-card" data-category="cafe">
-                    <img src="../static/img/iccecoffe.avif" alt="Café com Leite">
+                <article class="product-card" data-category="cafe">
+                    <img src="../static/img/cafecomleiteoriginal.jpg" alt="Café com Leite">
                     <div class="product-info">
                         <span class="category">Café</span>
                         <h2>Café com Leite</h2>
-                        <p>Clássico e reconfortante, ideal para começar o dia.</p>
+                        <p>Combinação clássica de café e leite.</p>
                         <div class="product-footer">
                             <strong>R$ 10,00</strong>
-                            <button class="small-button add-product" data-name="Café com Leite">Adicionar</button>
+                            <button class="small-button add-product"
+                                    type="button"
+                                    data-name="Café com Leite"
+                                    data-price="10.00">Adicionar</button>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="product-card" data-category="cafe">
-                    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=500&q=60" alt="Macchiato">
+                <article class="product-card" data-category="cafe">
+                    <img src="../static/img/macchiatoorginal.avif" alt="Macchiato">
                     <div class="product-info">
                         <span class="category">Café</span>
                         <h2>Macchiato</h2>
-                        <p>Espresso com um toque de leite, para quem gosta de intensidade.</p>
+                        <p>Espresso com uma delicada camada de leite.</p>
                         <div class="product-footer">
                             <strong>R$ 11,00</strong>
-                            <button class="small-button add-product" data-name="Macchiato">Adicionar</button>
+                            <button class="small-button add-product"
+                                    type="button"
+                                    data-name="Macchiato"
+                                    data-price="11.00">Adicionar</button>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="product-card" data-category="cafe">
-                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=500&q=60" alt="Americano">
+                <article class="product-card" data-category="cafe">
+                    <img src="../static/img/cafeamericanooriginal.png" alt="Americano">
                     <div class="product-info">
                         <span class="category">Café</span>
                         <h2>Americano</h2>
-                        <p>Suave e leve, um espresso diluído em água quente.</p>
+                        <p>Espresso suavizado com água quente.</p>
                         <div class="product-footer">
                             <strong>R$ 7,00</strong>
-                            <button class="small-button add-product" data-name="Americano">Adicionar</button>
+                            <button class="small-button add-product"
+                                    type="button"
+                                    data-name="Americano"
+                                    data-price="7.00">Adicionar</button>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="product-card" data-category="cafe">
-                    <img src="https://images.unsplash.com/photo-1517668808822-9ebb02ae2a0e?auto=format&fit=crop&w=500&q=60" alt="Flat White">
+                <article class="product-card" data-category="cafe">
+                    <img src="../static/img/flatwhitedois.webp" alt="Flat White">
                     <div class="product-info">
                         <span class="category">Café</span>
                         <h2>Flat White</h2>
-                        <p>Liso e cremoso, uma combinação perfeita de café e leite.</p>
+                        <p>Espresso encorpado com leite cremoso.</p>
                         <div class="product-footer">
                             <strong>R$ 13,00</strong>
-                            <button class="small-button add-product" data-name="Flat White">Adicionar</button>
+                            <button class="small-button add-product"
+                                    type="button"
+                                    data-name="Flat White"
+                                    data-price="13.00">Adicionar</button>
                         </div>
                     </div>
-                </div>
+                </article>
 
                 <!-- DOCES -->
-                <div class="product-card" data-category="doces">
-                    <img src="https://images.unsplash.com/photo-1585080872051-9bea551a2e45?auto=format&fit=crop&w=500&q=60" alt="Donut">
+                <article class="product-card" data-category="doces">
+                    <img src="../static/img/brigadeiro.jpg" alt="Brigadeiro">
                     <div class="product-info">
-                        <span class="category">Doce</span>
-                        <h2>Donut Aurora</h2>
-                        <p>Donut macio com cobertura de chocolate.</p>
+                        <span class="category">Doces</span>
+                        <h2>Brigadeiro</h2>
+                        <p>Brigadeiro tradicional, cremoso e delicioso.</p>
                         <div class="product-footer">
                             <strong>R$ 10,00</strong>
-                            <button class="small-button add-product" data-name="Donut Aurora">Adicionar</button>
->>>>>>> bfb9820f16b444f00b93d9db7c236fa87c526f66
+                            <button class="small-button add-product"
+                                    type="button"
+                                    data-name="Brigadeiro"
+                                    data-price="10.00">Adicionar</button>
                         </div>
-
                     </div>
-<<<<<<< HEAD
-
                 </article>
 
-
-                <article class="product-card" data-category="cafe">
-
-                    <img src="../static/img/cappuccinooriginal.jpg" alt="Cappuccino">
-
+                <article class="product-card" data-category="doces">
+                    <img src="../static/img/bolo.avif" alt="Bolo de Chocolate">
                     <div class="product-info">
-
-                        <span class="category">
-                            Café
-                        </span>
-
-                        <h2>
-                            Cappuccino
-                        </h2>
-
-                        <p>
-                            Café cremoso com leite vaporizado.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <strong>
-                                R$ 12,00
-                            </strong>
-
-                            <button
-                                class="small-button"
-                                type="button"
-                                data-name="Cappuccino"
-                                data-price="12.00"
-                            >
-                                Adicionar
-                            </button>
-
-                        </div>
-
-=======
-                </div>
-
-                <div class="product-card" data-category="doces">
-                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=60" alt="Bolo de Chocolate">
-                    <div class="product-info">
-                        <span class="category">Doce</span>
+                        <span class="category">Doces</span>
                         <h2>Bolo de Chocolate</h2>
-                        <p>Fatia de bolo fofinho com cobertura cremosa.</p>
+                        <p>Bolo macio de chocolate.</p>
                         <div class="product-footer">
                             <strong>R$ 12,00</strong>
-                            <button class="small-button add-product" data-name="Bolo de Chocolate">Adicionar</button>
+                            <button class="small-button add-product"
+                                    type="button"
+                                    data-name="Bolo de Chocolate"
+                                    data-price="12.00">Adicionar</button>
                         </div>
->>>>>>> bfb9820f16b444f00b93d9db7c236fa87c526f66
                     </div>
-                </div>
-
-<<<<<<< HEAD
                 </article>
-
-
-                <article class="product-card" data-category="cafe">
-
-                    <img src="../static/img/cafecomleiteoriginal.jpg" alt="Café com Leite">
-
-                    <div class="product-info">
-
-                        <span class="category">
-                            Café
-                        </span>
-
-                        <h2>
-                            Café com Leite
-                        </h2>
-
-                        <p>
-                            Combinação clássica de café e leite.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <strong>
-                                R$ 10,00
-                            </strong>
-
-                            <button
-                                class="small-button"
-                                type="button"
-                                data-name="Café com Leite"
-                                data-price="10.00"
-                            >
-                                Adicionar
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="product-card" data-category="cafe">
-
-                    <img src="../static/img/macchiatoorginal.avif" alt="Macchiato">
-
-                    <div class="product-info">
-
-                        <span class="category">
-                            Café
-                        </span>
-
-                        <h2>
-                            Macchiato
-                        </h2>
-
-                        <p>
-                            Espresso com uma delicada camada de leite.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <strong>
-                                R$ 11,00
-                            </strong>
-
-                            <button
-                                class="small-button"
-                                type="button"
-                                data-name="Macchiato"
-                                data-price="11.00"
-                            >
-                                Adicionar
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="product-card" data-category="cafe">
-
-                    <img src="../static/img/cafeamericanooriginal.png" alt="Americano">
-
-                    <div class="product-info">
-
-                        <span class="category">
-                            Café
-                        </span>
-
-                        <h2>
-                            Americano
-                        </h2>
-
-                        <p>
-                            Espresso suavizado com água quente.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <strong>
-                                R$ 7,00
-                            </strong>
-
-                            <button
-                                class="small-button"
-                                type="button"
-                                data-name="Americano"
-                                data-price="7.00"
-                            >
-                                Adicionar
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="product-card" data-category="cafe">
-
-                    <img src="../static/img/flatwhitedois.webp" alt="Flat White">
-
-                    <div class="product-info">
-
-                        <span class="category">
-                            Café
-                        </span>
-
-                        <h2>
-                            Flat White
-                        </h2>
-
-                        <p>
-                            Espresso encorpado com leite cremoso.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <strong>
-                                R$ 13,00
-                            </strong>
-
-                            <button
-                                class="small-button"
-                                type="button"
-                                data-name="Flat White"
-                                data-price="13.00"
-                            >
-                                Adicionar
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- =========================
-                     DOCES
-                ========================== -->
 
                 <article class="product-card" data-category="doces">
-
-                    <img src="../static/img/brigadeiro.jpg" alt="Brigadeiro">
-
-                    <div class="product-info">
-
-                        <span class="category">
-                            Doces
-                        </span>
-
-                        <h2>
-                            Brigadeiro
-                        </h2>
-
-                        <p>
-                            Brigadeiro tradicional, cremoso e delicioso.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <strong>
-                                R$ 10,00
-                            </strong>
-
-                            <button
-                                class="small-button"
-                                type="button"
-                                data-name="Brigadeiro"
-                                data-price="10.00"
-                            >
-                                Adicionar
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="product-card" data-category="doces">
-
-                    <img src="../static/img/bolo.avif" alt="Bolo de Chocolate">
-
-                    <div class="product-info">
-
-                        <span class="category">
-                            Doces
-                        </span>
-
-                        <h2>
-                            Bolo de Chocolate
-                        </h2>
-
-                        <p>
-                            Bolo macio de chocolate.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <strong>
-                                R$ 12,00
-                            </strong>
-
-                            <button
-                                class="small-button"
-                                type="button"
-                                data-name="Bolo de Chocolate"
-                                data-price="12.00"
-                            >
-                                Adicionar
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="product-card" data-category="doces">
-
                     <img src="../static/img/croissant.webp" alt="Croissant de Chocolate">
-
                     <div class="product-info">
-
-                        <span class="category">
-                            Doces
-                        </span>
-
-                        <h2>
-                            Croissant de Chocolate
-                        </h2>
-
-                        <p>
-                            Croissant crocante recheado com chocolate.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <strong>
-                                R$ 9,50
-                            </strong>
-
-                            <button
-                                class="small-button"
-                                type="button"
-                                data-name="Croissant de Chocolate"
-                                data-price="9.50"
-                            >
-                                Adicionar
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="product-card" data-category="doces">
-
-                    <img src="../static/img/tortamorango.jpg" alt="Torta de Morango">
-
-                    <div class="product-info">
-
-                        <span class="category">
-                            Doces
-                        </span>
-
-                        <h2>
-                            Torta de Morango
-                        </h2>
-
-                        <p>
-                            Torta cremosa com morangos frescos.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <strong>
-                                R$ 14,00
-                            </strong>
-
-                            <button
-                                class="small-button"
-                                type="button"
-                                data-name="Torta de Morango"
-                                data-price="14.00"
-                            >
-                                Adicionar
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="product-card" data-category="doces">
-
-                    <img src="../static/img/brownie.jpg" alt="Brownie Clássico">
-
-                    <div class="product-info">
-
-                        <span class="category">
-                            Doces
-                        </span>
-
-                        <h2>
-                            Brownie Clássico
-                        </h2>
-
-                        <p>
-                            Brownie macio com sabor intenso de chocolate.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <strong>
-                                R$ 11,00
-                            </strong>
-
-                            <button
-                                class="small-button"
-                                type="button"
-                                data-name="Brownie Clássico"
-                                data-price="11.00"
-                            >
-                                Adicionar
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="product-card" data-category="doces">
-
-                    <img src="../static/img/muffins.jpg" alt="Muffin de Blueberry">
-
-                    <div class="product-info">
-
-                        <span class="category">
-                            Doces
-                        </span>
-
-                        <h2>
-                            Muffin de Blueberry
-                        </h2>
-
-                        <p>
-                            Muffin macio com blueberry.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <strong>
-                                R$ 9,00
-                            </strong>
-
-                            <button
-                                class="small-button"
-                                type="button"
-                                data-name="Muffin de Blueberry"
-                                data-price="9.00"
-                            >
-                                Adicionar
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- =========================
-                     SALGADOS
-                ========================== -->
-
-                <article class="product-card" data-category="salgados">
-
-                    <img src="../static/img/grelhadosanduiche.webp" alt="Sanduíche Grelhado">
-
-                    <div class="product-info">
-
-                        <span class="category">
-                            Salgados
-                        </span>
-
-                        <h2>
-                            Sanduíche Grelhado
-                        </h2>
-
-                        <p>
-                            Sanduíche grelhado e preparado na hora.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <strong>
-                                R$ 14,00
-                            </strong>
-
-                            <button
-                                class="small-button"
-                                type="button"
-                                data-name="Sanduíche Grelhado"
-                                data-price="14.00"
-                            >
-                                Adicionar
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="product-card" data-category="salgados">
-
-                    <img src="../static/img/espinafre.jpg" alt="Quiche de Espinafre">
-
-                    <div class="product-info">
-
-                        <span class="category">
-                            Salgados
-                        </span>
-
-                        <h2>
-                            Quiche de Espinafre
-                        </h2>
-
-                        <p>
-                            Quiche cremosa com espinafre.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <strong>
-                                R$ 13,00
-                            </strong>
-
-                            <button
-                                class="small-button"
-                                type="button"
-                                data-name="Quiche de Espinafre"
-                                data-price="13.00"
-                            >
-                                Adicionar
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="product-card" data-category="salgados">
-
-                    <img src="../static/img/broademilho.jpg" alt="Broa de Milho">
-
-                    <div class="product-info">
-
-                        <span class="category">
-                            Salgados
-                        </span>
-
-                        <h2>
-                            Broa de Milho
-                        </h2>
-
-                        <p>
-                            Broa de milho tradicional.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <strong>
-                                R$ 8,50
-                            </strong>
-
-                            <button
-                                class="small-button"
-                                type="button"
-                                data-name="Broa de Milho"
-                                data-price="8.50"
-                            >
-                                Adicionar
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="product-card" data-category="salgados">
-
-                    <img src="../static/img/croissantdequeijoori.jpg" alt="Croissant de Queijo">
-
-                    <div class="product-info">
-
-                        <span class="category">
-                            Salgados
-                        </span>
-
-                        <h2>
-                            Croissant de Queijo
-                        </h2>
-
-                        <p>
-                            Croissant dourado recheado com queijo.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <strong>
-                                R$ 10,00
-                            </strong>
-
-                            <button
-                                class="small-button"
-                                type="button"
-                                data-name="Croissant de Queijo"
-                                data-price="10.00"
-                            >
-                                Adicionar
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="product-card" data-category="salgados">
-
-                    <img src="../static/img/baguetecomqueijo.webp" alt="Baguete com Queijo">
-
-                    <div class="product-info">
-
-                        <span class="category">
-                            Salgados
-                        </span>
-
-                        <h2>
-                            Baguete com Queijo
-                        </h2>
-
-                        <p>
-                            Baguete crocante com queijo.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <strong>
-                                R$ 11,00
-                            </strong>
-
-                            <button
-                                class="small-button"
-                                type="button"
-                                data-name="Baguete com Queijo"
-                                data-price="11.00"
-                            >
-                                Adicionar
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="product-card" data-category="salgados">
-
-                    <img src="../static/img/paodequeijo.jpg" alt="Pão de Queijo">
-
-                    <div class="product-info">
-
-                        <span class="category">
-                            Salgados
-                        </span>
-
-                        <h2>
-                            Pão de Queijo
-                        </h2>
-
-                        <p>
-                            Pão de queijo quentinho e tradicional.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <strong>
-                                R$ 7,50
-                            </strong>
-
-                            <button
-                                class="small-button"
-                                type="button"
-                                data-name="Pão de Queijo"
-                                data-price="7.50"
-                            >
-                                Adicionar
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-=======
-                <div class="product-card" data-category="doces">
-                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=500&q=60" alt="Croissant de Chocolate">
-                    <div class="product-info">
-                        <span class="category">Doce</span>
+                        <span class="category">Doces</span>
                         <h2>Croissant de Chocolate</h2>
-                        <p>Massa folhada crocante com chocolate belga.</p>
+                        <p>Croissant crocante recheado com chocolate.</p>
                         <div class="product-footer">
                             <strong>R$ 9,50</strong>
-                            <button class="small-button add-product" data-name="Croissant de Chocolate">Adicionar</button>
+                            <button class="small-button add-product"
+                                    type="button"
+                                    data-name="Croissant de Chocolate"
+                                    data-price="9.50">Adicionar</button>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="product-card" data-category="doces">
-                    <img src="https://images.unsplash.com/photo-1599599810694-b5ac4dd8b68d?auto=format&fit=crop&w=500&q=60" alt="Torta de Morango">
+                <article class="product-card" data-category="doces">
+                    <img src="../static/img/tortamorango.jpg" alt="Torta de Morango">
                     <div class="product-info">
-                        <span class="category">Doce</span>
+                        <span class="category">Doces</span>
                         <h2>Torta de Morango</h2>
-                        <p>Fatia de torta com morangos frescos e calda doce.</p>
+                        <p>Torta cremosa com morangos frescos.</p>
                         <div class="product-footer">
                             <strong>R$ 14,00</strong>
-                            <button class="small-button add-product" data-name="Torta de Morango">Adicionar</button>
+                            <button class="small-button add-product"
+                                    type="button"
+                                    data-name="Torta de Morango"
+                                    data-price="14.00">Adicionar</button>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="product-card" data-category="doces">
-                    <img src="https://images.unsplash.com/photo-1634371179604-d3fdb7f1ef14?auto=format&fit=crop&w=500&q=60" alt="Brownie">
+                <article class="product-card" data-category="doces">
+                    <img src="../static/img/brownie.jpg" alt="Brownie Clássico">
                     <div class="product-info">
-                        <span class="category">Doce</span>
+                        <span class="category">Doces</span>
                         <h2>Brownie Clássico</h2>
-                        <p>Brownie pegajoso com pedaços de chocolate derretido.</p>
+                        <p>Brownie macio com sabor intenso de chocolate.</p>
                         <div class="product-footer">
                             <strong>R$ 11,00</strong>
-                            <button class="small-button add-product" data-name="Brownie Clássico">Adicionar</button>
+                            <button class="small-button add-product"
+                                    type="button"
+                                    data-name="Brownie Clássico"
+                                    data-price="11.00">Adicionar</button>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="product-card" data-category="doces">
-                    <img src="https://images.unsplash.com/photo-1488477181946-85a2fdeae267?auto=format&fit=crop&w=500&q=60" alt="Muffin de Blueberry">
+                <article class="product-card" data-category="doces">
+                    <img src="../static/img/muffins.jpg" alt="Muffin de Blueberry">
                     <div class="product-info">
-                        <span class="category">Doce</span>
+                        <span class="category">Doces</span>
                         <h2>Muffin de Blueberry</h2>
-                        <p>Muffin macio com frutas vermelhas frescas.</p>
+                        <p>Muffin macio com blueberry.</p>
                         <div class="product-footer">
                             <strong>R$ 9,00</strong>
-                            <button class="small-button add-product" data-name="Muffin de Blueberry">Adicionar</button>
+                            <button class="small-button add-product"
+                                    type="button"
+                                    data-name="Muffin de Blueberry"
+                                    data-price="9.00">Adicionar</button>
                         </div>
                     </div>
-                </div>
-
-                <div class="product-card" data-category="doces">
-                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=60" alt="Cheesecake">
-                    <div class="product-info">
-                        <span class="category">Doce</span>
-                        <h2>Cheesecake Clássico</h2>
-                        <p>Cheesecake cremoso com cobertura de frutas vermelhas.</p>
-                        <div class="product-footer">
-                            <strong>R$ 16,00</strong>
-                            <button class="small-button add-product" data-name="Cheesecake Clássico">Adicionar</button>
-                        </div>
-                    </div>
-                </div>
+                </article>
 
                 <!-- SALGADOS -->
-                <div class="product-card" data-category="salgados">
-                    <img src="https://images.unsplash.com/photo-1605521992968-5e70b5f8d86c?auto=format&fit=crop&w=500&q=60" alt="Sanduíche Grelhado">
+                <article class="product-card" data-category="salgados">
+                    <img src="../static/img/grelhadosanduiche.webp" alt="Sanduíche Grelhado">
                     <div class="product-info">
-                        <span class="category">Salgado</span>
+                        <span class="category">Salgados</span>
                         <h2>Sanduíche Grelhado</h2>
-                        <p>Pão na chapa com presunto, queijo e tomate.</p>
+                        <p>Sanduíche grelhado e preparado na hora.</p>
                         <div class="product-footer">
                             <strong>R$ 14,00</strong>
-                            <button class="small-button add-product" data-name="Sanduíche Grelhado">Adicionar</button>
+                            <button class="small-button add-product"
+                                    type="button"
+                                    data-name="Sanduíche Grelhado"
+                                    data-price="14.00">Adicionar</button>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="product-card" data-category="salgados">
-                    <img src="https://images.unsplash.com/photo-1567521464027-f127ff144326?auto=format&fit=crop&w=500&q=60" alt="Quiche">
+                <article class="product-card" data-category="salgados">
+                    <img src="../static/img/espinafre.jpg" alt="Quiche de Espinafre">
                     <div class="product-info">
-                        <span class="category">Salgado</span>
+                        <span class="category">Salgados</span>
                         <h2>Quiche de Espinafre</h2>
-                        <p>Quiche com espinafre e queijo derretido.</p>
+                        <p>Quiche cremosa com espinafre.</p>
                         <div class="product-footer">
                             <strong>R$ 13,00</strong>
-                            <button class="small-button add-product" data-name="Quiche de Espinafre">Adicionar</button>
+                            <button class="small-button add-product"
+                                    type="button"
+                                    data-name="Quiche de Espinafre"
+                                    data-price="13.00">Adicionar</button>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="product-card" data-category="salgados">
-                    <img src="https://images.unsplash.com/photo-1584099950769-0d0a5e5ced59?auto=format&fit=crop&w=500&q=60" alt="Broa de Milho">
+                <article class="product-card" data-category="salgados">
+                    <img src="../static/img/broademilho.jpg" alt="Broa de Milho">
                     <div class="product-info">
-                        <span class="category">Salgado</span>
+                        <span class="category">Salgados</span>
                         <h2>Broa de Milho</h2>
-                        <p>Broa crocante feita com milho e sementes.</p>
+                        <p>Broa de milho tradicional.</p>
                         <div class="product-footer">
                             <strong>R$ 8,50</strong>
-                            <button class="small-button add-product" data-name="Broa de Milho">Adicionar</button>
+                            <button class="small-button add-product"
+                                    type="button"
+                                    data-name="Broa de Milho"
+                                    data-price="8.50">Adicionar</button>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="product-card" data-category="salgados">
-                    <img src="https://images.unsplash.com/photo-1589985643288-ce5eb6dc2b0f?auto=format&fit=crop&w=500&q=60" alt="Croissant de Queijo">
+                <article class="product-card" data-category="salgados">
+                    <img src="../static/img/croissantdequeijoori.jpg" alt="Croissant de Queijo">
                     <div class="product-info">
-                        <span class="category">Salgado</span>
+                        <span class="category">Salgados</span>
                         <h2>Croissant de Queijo</h2>
-                        <p>Croissant folhado com três tipos de queijo.</p>
+                        <p>Croissant dourado recheado com queijo.</p>
                         <div class="product-footer">
                             <strong>R$ 10,00</strong>
-                            <button class="small-button add-product" data-name="Croissant de Queijo">Adicionar</button>
+                            <button class="small-button add-product"
+                                    type="button"
+                                    data-name="Croissant de Queijo"
+                                    data-price="10.00">Adicionar</button>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="product-card" data-category="salgados">
-                    <img src="https://images.unsplash.com/photo-1581353977817-ce786bc75f90?auto=format&fit=crop&w=500&q=60" alt="Baguete com Queijo">
+                <article class="product-card" data-category="salgados">
+                    <img src="../static/img/baguetecomqueijo.webp" alt="Baguete com Queijo">
                     <div class="product-info">
-                        <span class="category">Salgado</span>
+                        <span class="category">Salgados</span>
                         <h2>Baguete com Queijo</h2>
-                        <p>Baguete crocante com queijo parmesão derretido.</p>
+                        <p>Baguete crocante com queijo.</p>
                         <div class="product-footer">
                             <strong>R$ 11,00</strong>
-                            <button class="small-button add-product" data-name="Baguete com Queijo">Adicionar</button>
+                            <button class="small-button add-product"
+                                    type="button"
+                                    data-name="Baguete com Queijo"
+                                    data-price="11.00">Adicionar</button>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="product-card" data-category="salgados">
-                    <img src="https://images.unsplash.com/photo-1565520543270-a0eed25c32a1?auto=format&fit=crop&w=500&q=60" alt="Pão de Queijo">
+                <article class="product-card" data-category="salgados">
+                    <img src="../static/img/paodequeijo.jpg" alt="Pão de Queijo">
                     <div class="product-info">
-                        <span class="category">Salgado</span>
-                        <h2>Pão de Queijo Aurora</h2>
-                        <p>Pão de queijo caseiro, quentinho e crocante.</p>
+                        <span class="category">Salgados</span>
+                        <h2>Pão de Queijo</h2>
+                        <p>Pão de queijo quentinho e tradicional.</p>
                         <div class="product-footer">
                             <strong>R$ 7,50</strong>
-                            <button class="small-button add-product" data-name="Pão de Queijo Aurora">Adicionar</button>
+                            <button class="small-button add-product"
+                                    type="button"
+                                    data-name="Pão de Queijo"
+                                    data-price="7.50">Adicionar</button>
                         </div>
                     </div>
-                </div>
->>>>>>> bfb9820f16b444f00b93d9db7c236fa87c526f66
+                </article>
+
             </div>
-
         </section>
-
     </main>
 
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
+    <!-- RODAPÉ -->
     <footer class="footer">
-
         <div class="container footer-content">
 
             <div class="footer-info">
-
-                <h3>
-                    Café Aura
-                </h3>
-
-                <p>
-                    Café especial, sabor e bons momentos.
-                </p>
-
+                <h3>Café Aura</h3>
+                <p>Café especial, sabor e bons momentos.</p>
             </div>
 
-
             <div class="footer-social">
-
-                <h3>
-                    Redes sociais
-                </h3>
-
+                <h3>Redes sociais</h3>
                 <div class="social-icons">
-
                     <a href="#" aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                         <span>@cafeaura</span>
@@ -1241,80 +426,31 @@
                         <i class="fa-brands fa-facebook-f"></i>
                         <span>@cafeaura</span>
                     </a>
-
                 </div>
-
             </div>
 
-
             <div class="footer-contact">
-
-                <h3>
-                    Contato
-                </h3>
-
+                <h3>Contato</h3>
                 <a href="mailto:contato@cafeaura.com">
-
                     <i class="fa-solid fa-envelope"></i>
-
-                    <span>
-                        contato@cafeaura.com
-                    </span>
-
+                    <span>contato@cafeaura.com</span>
                 </a>
 
                 <a href="#">
-
                     <i class="fa-solid fa-location-dot"></i>
-
-                    <span>
-                        Rua das Flores, 245
-                    </span>
-
+                    <span>Rua das Flores, 245</span>
                 </a>
-
             </div>
 
         </div>
 
-
         <div class="footer-bottom">
-
-            <span>
-                © 2026 Café Aura. Todos os direitos reservados.
-            </span>
-
+            <span>© 2026 Café Aura. Todos os direitos reservados.</span>
         </div>
-
     </footer>
-<<<<<<< HEAD
 
-
+    <!-- JAVASCRIPT EXTERNO -->
     <script src="../static/js/index.js"></script>
 
-=======
-    <script src="static/js/index.js"></script>
-    <script>
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const filter = btn.dataset.filter;
-
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                document.querySelectorAll('.product-card').forEach(card => {
-                    const category = card.dataset.category;
-
-                    if (filter === 'todos' || category === filter) {
-                        card.classList.remove('hidden');
-                    } else {
-                        card.classList.add('hidden');
-                    }
-                });
-            });
-        });
-    </script>
->>>>>>> bfb9820f16b444f00b93d9db7c236fa87c526f66
 </body>
-
 </html>
